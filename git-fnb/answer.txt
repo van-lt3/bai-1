@@ -1,0 +1,12 @@
+Các bước để đẩy code lên GitHub:
+1. git init:  để khởi tạo 1 repository ở máy local
+2. git add .: để add toàn bộ project
+3. git commit -m: để commit code và comment cho commit đó
+4. git remote add origin git@github.com:van-lt3/bai-1.git: để liên kết repo local (máy của bạn) với một remote repo trên GitHub.
+5. git push: sau khi liên kết xong đẩy project lên remote repo trên GitHub.
+
+
+-------------------------------
+cấu hình Git username, email:
+git config --global user.name "vanlethao"
+git config --global user.email "=lethaovan2309@gmail.com"
