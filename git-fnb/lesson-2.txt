@@ -1,0 +1,41 @@
+1. Giải thích các câu lệnh: git init, git add <file_name>, git add ., git commit -m "message"
+
+- git init: Dùng để khởi tạo một Git repository mới trong folder hiện tại. Sau khi chạy, Git sẽ tạo thư mục ẩn .git để lưu trữ toàn bộ lịch sử và cấu hình của repo.Khởi tạo các vùng: Working directory, Staging area, Repository
+
+- git add <file_name>: Đưa file chỉ định vào Staging Area (vùng chuẩn bị commit).
+
+- git add .: Đưa tất cả file mới hoặc file đã thay đổi trong thư mục hiện tại vào Staging Area.
+ 
+- git commit -m "message": Ghi lại (snapshot) trạng thái của toàn bộ các file trong staging area vào repository, kèm theo lời nhắn (commit message) để mô tả thay đổi.
+
+2. Hãy tưởng tượng có 1 folder lesson-2 mới được tạo. Hãy liệt kê các file theo từng vùng sau khi thao tác một loạt các lệnh sau (nếu bạn không chạy lệnh trên máy thật, mà bạn suy nghĩ trong đầu để ra được kết quả; bạn sẽ nhớ rất lâu):
+
+a. Tạo 3 file: file1, file2, file3
+- Working Directory: file1, file2, file3
+- Staging Area: (trống)
+- Repository: (trống)
+
+b. Chạy lệnh: git init
+- Working Directory: file1, file2, file3
+- Staging Area: (trống)
+- Repository: (trống)
+
+c. Chạy lệnh: git commit -m"init project"
+- Working Directory: file1, file2, file3
+- Staging Area: (trống)
+- Repository: Commit "init project" (rỗng)
+
+d. Chạy lệnh: git add file1
+- Working Directory: file1, file2, file3
+- Staging Area: file1
+- Repository: Commit "init project" (rỗng)
+
+e. Chạy lệnh: git commit -m"add file1"
+- Working Directory: file1, file2, file3
+- Staging Area: (trống)
+- Repository: Commit "init project" (rỗng), Commit "add file1" (có file1)
+
+f. Chạy lệnh: git add file
+- Working Directory: file1, file2, file3
+- Staging Area: (trống) (do không có file tên "file")
+- Repository: Commit "init project" (rỗng), Commit "add file1" (có file1)
