@@ -10,32 +10,39 @@
 
 2. Hãy tưởng tượng có 1 folder lesson-2 mới được tạo. Hãy liệt kê các file theo từng vùng sau khi thao tác một loạt các lệnh sau (nếu bạn không chạy lệnh trên máy thật, mà bạn suy nghĩ trong đầu để ra được kết quả; bạn sẽ nhớ rất lâu):
 
-a. Tạo 3 file: file1, file2, file3
-- Working Directory: file1, file2, file3
-- Staging Area: (trống)
-- Repository: (trống)
-
+a. Tạo 3 file: file1, file2, file3 
 b. Chạy lệnh: git init
-- Working Directory: file1, file2, file3
-- Staging Area: (trống)
-- Repository: (trống)
-
 c. Chạy lệnh: git commit -m"init project"
-- Working Directory: file1, file2, file3
-- Staging Area: (trống)
-- Repository: Commit "init project" (rỗng)
-
 d. Chạy lệnh: git add file1
-- Working Directory: file1, file2, file3
-- Staging Area: file1
-- Repository: Commit "init project" (rỗng)
-
 e. Chạy lệnh: git commit -m"add file1"
-- Working Directory: file1, file2, file3
-- Staging Area: (trống)
-- Repository: Commit "init project" (rỗng), Commit "add file1" (có file1)
-
 f. Chạy lệnh: git add file
-- Working Directory: file1, file2, file3
-- Staging Area: (trống) (do không có file tên "file")
-- Repository: Commit "init project" (rỗng), Commit "add file1" (có file1)
+ 
+Bước thực hiện: Tạo 3 file
+Working Directory: file1, file2, file3 (untracked)
+Staging Area: (trống)
+Repository: (chưa có repository)
+
+Bước thực hiện: git init
+Working Directory: file1, file2, file3 (untracked)
+Staging Area: (trống)
+Repository: Repository được khởi tạo (chưa commit)
+
+Bước thực hiện: git commit -m "init project"
+Working Directory: file1, file2, file3 (untracked)
+Staging Area: (trống)
+Repository: Repository vẫn chưa có file nào
+
+Bước thực hiện: git add file1
+Working Directory: file1 (staged), file2, file3 (untracked)
+Staging Area: file1
+Repository: (chưa có gì mới commit)
+
+Bước thực hiện: git commit -m "add file1"
+Working Directory: file2, file3 (untracked)
+Staging Area: (trống)
+Repository: file1 đã được commit vào repository
+
+Bước thực hiện: git add file 
+Working Directory: file2, file3 (untracked)
+Staging Area: (Lỗi: did not match any files)
+Repository: file1 vẫn nằm trong repository
